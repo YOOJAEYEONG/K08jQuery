@@ -45,10 +45,7 @@ off() : on()으로 부여한 이벤트를 제거하는 역할을 한다.
             $(".div2 button").on("click", function(){
                 $(".div2 ul").append("<li>추가된 li태그</li>");
             });
-            /*
-
-
-            */
+            
 
             $(".div2").on("click","li", function(){
                 $(this).css("color", "red").css("fontSize", "1.8em");

@@ -13,10 +13,11 @@ hover(인자1, 인자2) :
     인자1:마우스를 올렸을때 실행될함수
     인자2:마우스를 내렸을때 실행될 함수
 */
-        $(document).ready(function(){
+        $().ready(function(){
             $("img").hover(
                 function(){//인자1
-                    $(this).css({'width':'300px',
+                    $(this).css({
+                        'width':'300px',
                         'height':'400px',
                         'border':'3px solid black'
                     });
