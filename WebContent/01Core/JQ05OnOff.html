@@ -11,6 +11,10 @@ on() : 기본 사용법은 bind()와 동일하며 엘리먼트에 이벤트를 �
 off() : on()으로 부여한 이벤트를 제거하는 역할을 한다.
 
 ***on()으로 부여한 이벤트를 unbind()로 제거도 가능하다.
+
+사용법:
+        on("이벤트", "이벤트헨들러")
+        on("이벤트", "선택자", "이벤트발생시 선택자 헨들러")
 */
         $(document).ready(function(){
 
@@ -23,7 +27,7 @@ off() : on()으로 부여한 이벤트를 제거하는 역할을 한다.
             });
 
             /*
-            after() : 선택된 요소 다음 부분에 인제로 전달되는 컨텐츠를 추가한다.
+            after() : 선택된 요소 다음 부분에 인자로 전달되는 컨텐츠를 추가한다.
             */
             $('#div1').on("click", function(){
                 alert('클릭이벤트 발생됨');
@@ -31,8 +35,10 @@ off() : on()으로 부여한 이벤트를 제거하는 역할을 한다.
                 #div1을 선택한후 on()으로 실행부를 구성하고 있으므로 
                 $(this)는 현재 선택된 #div1요소를 가리킨다.
                 */
+                $(this).before("<div style='background-color:green;'>동적으로 생성한 div</div>");
                 $(this).after("<div style='background-color:green;'>동적으로 생성한 div</div>");
             });
+           
 
             /*
             append() : after()와 동일하게 선택된 요소 다음부분에 컨텐츠를 추가함.
@@ -43,6 +49,7 @@ off() : on()으로 부여한 이벤트를 제거하는 역할을 한다.
             하지만 on()을 통해 이벤트를 부여할 수 있다.
             */
             $(".div2 button").on("click", function(){
+                $(".div2 ul").prepend("<li>추가된 li태그</li>");
                 $(".div2 ul").append("<li>추가된 li태그</li>");
             });
             
@@ -50,6 +57,7 @@ off() : on()으로 부여한 이벤트를 제거하는 역할을 한다.
             $(".div2").on("click","li", function(){
                 $(this).css("color", "red").css("fontSize", "1.8em");
             });
+            
         });
         
 

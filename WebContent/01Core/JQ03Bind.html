@@ -11,39 +11,43 @@
     bind(): 이벤트를 여러개 연결할때 사용하는 메소드
     unbind() : 이벤트를 해제할때 사용하는 메소드
     **주로 메소드체인 형태로 사용해서 여러개의 이벤트를 연결할 수 있음
+    $("li:has(span)").text("<span>요소를 가지고 있는 li태그를 선택했어요!");
     */
-        $(document).ready(function(){
-            $('#click_change')
-                .bind("mouseover", function(){
-                    //JS의 함수를 이용해서 배경색 변경
-                    document.getElementById("click_change")
-                        .style.backgroundColor="red";
-                })
-                .bind("mouseout", function(){
-                    //jQuery get()을 통해 요소를 선택하고 배경색 변경
-                    $(this).get(0)
-                        .style.backgroundColor="white"
-                })
-                .bind("click", function(){
-                    //text() : JS의 innerText와 동일하다
-                    alert($(this).text());
-                });
-
-            $('#btnClick').click( function() {
-                alert('버튼클릭됨');
+    $(document).ready(function(){
+        $('#click_change')
+            .bind("mouseover", function(){
+                //JS의 함수를 이용해서 배경색 변경
+                document.getElementById("click_change")
+                    .style.backgroundColor="red";
+            })
+            .bind("mouseout", function(){
+                /*
+                get() : 선택된 모든 요소를 배열로 가져온다.
+                get(index) : 선택된요소중 해당인덱스의 요소하나를 가져온다.
+                */
+                $(this).get(0).style.backgroundColor="white"
+                
+            })
+            .bind("click", function(){
+                //text() : JS의 innerText와 동일하다
+                alert($(this).text());
             });
 
-
-            /*
-            해당코드가 실행되면 #btnClick을 눌러도
-            아무런반응이 없게된다. 즉 click이벤트가 제거됨.
-            */
-            $('#btnEventClear').bind('click', function(){
-                $('#btnClick').unbind('click');
-                alert('#btnClick의 이벤트가 제거됨');
-            });
-
+        $('#btnClick').click( function() {
+            alert('버튼클릭됨');
         });
+
+
+        /*
+        해당코드가 실행되면 #btnClick을 눌러도
+        아무런반응이 없게된다. 즉 click이벤트가 제거됨.
+        */
+        $('#btnEventClear').bind('click', function(){
+            $('#btnClick').unbind('click');
+            alert('#btnClick의 이벤트가 제거됨');
+        });
+
+    });
     </script>
     <style>
         div{
@@ -70,7 +74,15 @@
 	<input type="button" id="btnClick" value="난버튼" />
 	
 	<input type="button" id="btnEventClear" 
-		value="이벤트제거버튼" />
+        value="이벤트제거버튼" />
+    <div id="oo">
+        <ul>
+
+            <li>vvvvv</li>
+            <li>vvvvv</li>
+            <li>vvvvv</li>
+        </ul>
+    </div>
 </body>
 
 </html>
