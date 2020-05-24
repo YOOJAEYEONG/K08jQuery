@@ -38,8 +38,9 @@
         */
         $('button').click(function(){
             //article1 엘리먼트에 설정된 폰트크기를 가져와서 숫자로 변경
-            var size = parseInt( $("#article1").css('fontSize') ); 
-
+            var size = $("#article1").css('fontSize'); //String타입의 "12px"
+            var size = parseInt( $("#article1").css('fontSize') ); "12px => 12"
+        
             //버튼의 text를 가져와서 버튼을 확인
             if($(this).text()=="기사늘리기"){
                 size += 2;

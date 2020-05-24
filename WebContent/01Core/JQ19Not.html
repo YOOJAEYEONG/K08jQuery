@@ -26,7 +26,8 @@ not() :
                 var str1 = '', str2 = '';
 
                 //a태그의 href속성에 jsp로 끝나는 요소를 제외한 나머지요소를선택
-                $('a').not('a[href $= "jsp"]').each(function(){
+                $("a").not('a[href $= "jsp"]').each(function(){
+                    
                     str1 += $(this).attr("href")+" ";
                     str2 += $(this).text() + ' ';
                 });

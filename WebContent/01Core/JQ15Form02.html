@@ -13,6 +13,9 @@
         input => input태그만 선택한다.
         :input => input태그를 포함하여 문서내의 모든 폼 요소를 선택한다.
         즉, textarea, select 가 포함된다.
+        :checked
+        :selected
+        :image .. 등등
         */
 
 
@@ -41,6 +44,7 @@
                     str += "\n";
                     str += "Typed의 속성값:"+$(this).attr('type');
                     str += '\n';
+                
                 });
                 alert(str);
             });
@@ -135,7 +139,7 @@ val() : 해당 엘리먼트의 value속성값을 가져오거나
                 //함수호출할때는 this.val()로 하면 에러가 발생한다. $(this)로 해야함
                 var pwd2 = $(this).val();
 
-                if(pwd1 == pwd2 ) {
+                if(pwd1 === pwd2 ) {
                     $('#msg').html('<b style="color:red">암호가일치합니다.</b>');
                 } else {
                     $('#msg').css('color','black').text('암호가 틀립니다.');

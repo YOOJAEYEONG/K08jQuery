@@ -39,7 +39,10 @@ attr() :
             $('#btnDel').click(function(){
                 var attrName = 
                     $('#attrSelect option:selected').val();
-                $('#viewImg').removeAttr(attrName);
+
+                alert($('#attrSelect option:selected').val());//"width"
+                $('#viewImg').removeAttr(attrName);//removeAttr("width");
+                
                 alert(attrName+"속성이 제거됨");
             });
 

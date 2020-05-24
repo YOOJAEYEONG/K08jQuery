@@ -23,8 +23,9 @@
     $(()=>{
         $('#btn1').click(function(){
             $('div').each(function(index){
-                $(this).attr({'id':'div'+index,
-                    style:'border:1px solid red; width:100px; height:100px'
+                $(this).attr({
+                    id      :'div'+index,
+                    style   :'border:1px solid red; width:100px; height:100px'
                 });
             });
         });

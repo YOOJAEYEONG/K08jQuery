@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    
     <script src="../common/jquery/jquery-3.5.1.js"></script>
     <script>
+/*
+이 예제에서는 subTarget을 타겟으로 폼값을 보내는 것을 주목
+*/
         $(function(){
             $('#submit').click(function(){
                 var f = document.getElementById('sForm');
@@ -19,7 +21,8 @@
                     alert('PW를 입력하세요');
                     return false;
                 }
-                $('#sForm').attr("method","post")
+                $('#sForm')
+                    .attr("method","post")
                     .attr('action','http://ikosmo.co.kr')
                     .attr('target','subTarget');
             });
