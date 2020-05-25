@@ -5,7 +5,6 @@
 
 
 <%
-//폼값을 받음
 String user_id = request.getParameter("user_id");
 String user_pw = request.getParameter("user_pw");
 

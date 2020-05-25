@@ -25,8 +25,8 @@ $(function(){
 
 	//외부의 txt파일을 현재문서로 로드한다.
 	$('#loadTxtBtn').click(function(){
-		//$('#loadTxt').load('./common/01LoadTxt.txt');
-		$('#loadTxt').load('../images/amazon.png');
+		$('#loadTxt').load('./common/01LoadTxt.txt');
+		
 		alert('TXT문서가 로드되었습니다.');
 	});
 
