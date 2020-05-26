@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="../common/bootstrap4.4.1/css/bootstrap.css" />
 <script>
 	$(function() {
-		$("#searchBtn").bind("click",searchGo);
-		$("#startNum").on("change",searchGo);
+		$("#searchBtn").bind("click", searchGo);
+		$("#startNum").on("change", searchGo);
 	});
 	var searchGo = function() {
 		console.log("searchGo실행됨");
@@ -21,7 +21,6 @@
 			data : {
 				keyword : $('#keyword').val(),
 				startNum : $("#startNum option:selected").val(),
-				display : 20
 			},
 			dataType : "json",
 			success : sucFuncJson,
@@ -32,20 +31,17 @@
 	function sucFuncJson(d) {
 		//alert("성공:"+d);
 		var str = "";
-		$
-				.each(
-						d.items,
-						function(index, item) {
-							str += index;
-							str += "<ul>";
-							str += "	<li>" + item.title + "</li>";
-							str += "	<li>" + item.description + "</li>";
-							str += "	<li>" + item.bloggername + "</li>";
-							str += "	<li>" + item.bloggerlink + "</li>";
-							str += "	<li>" + item.postdate + "</li>";
-							str += "	<li><a href='"+item.link+"' target='_blank'>바로가기</a></li>";
-							str += "</ul>";
-						});
+		$.each(d.items,	function(index, item) {
+			str += "<ul>";
+			str += "	<li>" + (index + 1) + "</li>";
+			str += "	<li>" + item.title + "</li>";
+			str += "	<li>" + item.description + "</li>";
+			str += "	<li>" + item.bloggername + "</li>";
+			str += "	<li>" + item.bloggerlink + "</li>";
+			str += "	<li>" + item.postdate + "</li>";
+			str += "	<li><a href='"+item.link+"' target='_blank'>바로가기</a></li>";
+			str += "</ul>";
+		});
 		$("#searchResult").html(str);
 	}
 	function errFunc(e) {
@@ -80,7 +76,6 @@ ul {
 		</div>
 
 		<div class="row" id="searchResult">요기에 정보가 노출됩니다</div>
-
 	</div>
 
 </body>

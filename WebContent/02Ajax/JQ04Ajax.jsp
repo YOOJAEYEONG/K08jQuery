@@ -19,16 +19,15 @@ $.ajax() :
     url     : 요청할 서버의 경로
     type    : 요청시 사용할 전송 방식. (get/post)
     dataType: 콜백데이터의 형식. json/xml/script/text/html 등
-    success : 요청에 성공했을때 콜백메소드
-    error   : 요청시 실패했을때 콜백메소드
     contentType : 전송시 사용할 컨텐츠 타입(get과 post가 다름)
     data    : 서버로 전송할 파라미터 . (JSON형식)
+    success : 요청에 성공했을때 콜백메소드
+    error   : 요청시 실패했을때 콜백메소드
 */
 $(function(){
     /*
     이 메소드는 문서의 로드가 끝난 직후 js파일의 내용을 읽어와서
     현재 문서에 로드한다. 즉, $.load()메소드와 동일한 역할을 하고있다.
-    
     */
     $.ajax({
         url : './common/04JsData.js',

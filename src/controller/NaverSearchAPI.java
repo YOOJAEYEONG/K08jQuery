@@ -26,14 +26,12 @@ public class NaverSearchAPI extends HttpServlet{
         String clientSecret = "wNcTgkE_au"; //애플리케이션 클라이언트 시크릿값"
 
         String text = null; 
-        String display=null;
-        String start=null;
+        int startNum=1;
         
         try {
         	//jsp페이지에서 입력한 검색어를 받아와서 변수처리
         	String searchTxt = req.getParameter("keyword");
-        	display = req.getParameter("display");
-        	start = req.getParameter("startNum");
+        	startNum = Integer.parseInt( req.getParameter("startNum") );
         	
             text = URLEncoder.encode(searchTxt, "UTF-8");
         } catch (UnsupportedEncodingException e) {
@@ -41,7 +39,7 @@ public class NaverSearchAPI extends HttpServlet{
         }
 
         String apiURL = "https://openapi.naver.com/v1/search/blog?query="
-        		+text+"&display="+display+"&start="+start;    // json 결과
+        		+text+"&display=20&start="+startNum;    // json 결과
         //String apiURL = "https://openapi.naver.com/v1/search/blog.xml?query="+ text; // xml 결과
 
         Map<String, String> requestHeaders = new HashMap<>();
