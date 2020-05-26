@@ -13,34 +13,25 @@
 <script>
 $(function(){
 	$("#btnLogin2").click(function(){
-		
 		var s_url = "./common/03PostLoginOracle.jsp";
-		/*
-		form태그의 하위태그들을 name속성을 통해 JSON으로 조립해주는
-		역할을 하는 메소드로, 하위 태그들이 많을때 사용한다.
-		*/
-		var s_params = $('#loginFrm').serialize();
-
+		var s_params = $("#loginFrm").serialize();
+		alert(s_params);
 		$.post(
 			s_url,
 			s_params,
-			function(resData){
-				var d = JSON.parse(resData);
-				if(d.result == 1){
+			function (responseData) {
+				var d = JSON.parse(responseData);
+				if(d.result==1){
 					console.log(d.message);
-					//JSON에 포함된 HTML value를 가져와서 삽입
-					$("#loginFrm").html(d.html);
-					//로그인 버튼은 숨김처리
-					$("#btnLogin2").hide();
-				} else {
-					alert(d.message);
+					
 				}
-				//콜백된 데이터를 Text형태로 삽입
-				$("#jsonDisplay").text(resData);
+				alert(typeof(d));
+				alert(d.isMember);
 			}
-		);
-	});
-	
+		)
+	});		
+		
+		
 });
 
 function checkFrm(){

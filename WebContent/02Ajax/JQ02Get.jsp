@@ -27,8 +27,6 @@ $(function(){
 		$.get(
 			'./common/02NameCard.xml',
 			function(data){
-
-				console.log(data);
 				$(data).find("명함").each(function(){
 					var html;
 					html +=	"<div>이름:"+$(this).find("성명").attr("이름")+"</div>";

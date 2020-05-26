@@ -71,7 +71,7 @@
 					<input type="hid-den" id="totalPrice" value="70000"
 						style="background-color: #bbbbbb; color: red;" />
 
-					<table class="table table-bordered">
+					<table class="table table-bordered" >
 						<colgroup>
 							<col width="30%" />
 							<col width="*" />

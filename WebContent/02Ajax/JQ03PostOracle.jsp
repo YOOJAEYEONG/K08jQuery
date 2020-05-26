@@ -32,11 +32,19 @@ $(function(){
 					$("#loginFrm").html(d.html);
 					//로그인 버튼은 숨김처리
 					$("#btnLogin2").hide();
+					alert(typeof(d));
+					alert(d.isMember);
 				} else {
 					alert(d.message);
 				}
 				//콜백된 데이터를 Text형태로 삽입
 				$("#jsonDisplay").text(resData);
+/*
+콜백JSON데이터
+{"result":1,
+"html":"<table class='table table-bordered' style='width:300px;'<tr> <td>회워님 반갑습니다.<\/td><\/tr><\/table>",
+"message":"로그인 성공이다"}
+*/
 			}
 		);
 	});

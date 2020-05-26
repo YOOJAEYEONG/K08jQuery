@@ -36,7 +36,12 @@ $(function(){
        /* 
           콜백되는 JSON배열 데이터를 each()로 읽어서 배열의 갯수만큼
           반복한다. 이때 각 반복시 JSON객체를 파싱하게 된다.
-      	파싱할때는 .(점)과 [](배열) 두가지 형태를 사용할 수 있다.
+		  파싱할때는 .(점)과 [](배열) 두가지 형태를 사용할 수 있다.
+		  
+		  // jQuery 유틸리티 메서드 
+		  $.each(object, function(index, item){ }); 
+		  // jQuery 일반 메서드 
+		  $(selector).each(function(index, item){ });
        */
           $.each(responseData, function (index, value) {
 	          var htmlStr = "<tr>";

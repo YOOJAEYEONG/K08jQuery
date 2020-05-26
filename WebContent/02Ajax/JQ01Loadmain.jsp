@@ -36,6 +36,7 @@ $(function(){
 			$('input[type="radio"][name="params"]:checked').val();
 		//위의 값을 이용해서 파라미터를 만든다. 이때파라미터는 JSON으로 기술해야함
 		var params = {"params":radioVar};
+		
 		//파라미터를 전달하면서 JSP문서를 로드한다.
 		$('#loadParam').load('./common/01LoadParam.jsp', params);
 		//전달된 파라미터에 따라 다른결과가 로드된다.
