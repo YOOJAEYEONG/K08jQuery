@@ -65,7 +65,7 @@ $(function(){
 
 	$('폼이름').serialize()
 	->해당 메소드를 이용하면 form하위의 모든요소에대해 JSON으로 조립해준다.
-	단, input요소의 name속성값이 key로 사용된다는것에 주의하다
+	단, input요소의 name속성값이 key로 사용된다는것에 주의하자
 
 */
 });
