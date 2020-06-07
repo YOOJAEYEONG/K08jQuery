@@ -33,6 +33,7 @@ $(function(){
   $("#btn").click(function () {
     $.ajax({
       success : function (responseData) {
+       console.log(responseData);
        /* 
           콜백되는 JSON배열 데이터를 each()로 읽어서 배열의 갯수만큼
           반복한다. 이때 각 반복시 JSON객체를 파싱하게 된다.
