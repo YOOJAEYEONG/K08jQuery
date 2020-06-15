@@ -38,12 +38,15 @@ $(function(){
         이때 URL 주소와 선택자는 띄어쓰기로 구분할 수 있습니다.
     */
     $.ajax({
-        url : './common/04JsData.js',
+        url : './common/NewFile.jsp',//ajax로 alert창 띄우기
+        //url : './common/04JsData.js',
         type:'get',
         dataType:'script',
         //요청성공시 콜백메소드는 무기명 함수 형태로 정의됨
         success : function (resData) {
-            MyAlert("HELLO","AJAX");
+            //MyAlert("HELLO","AJAX");
+            //console.log(resData);
+            //out.println(resData);
         },
         //요청 실패시 콜백메소드는 외부 JS함수로 정의됨
         error : errFunc
