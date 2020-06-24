@@ -20,7 +20,10 @@ $(function(){
 		역할을 하는 메소드로, 하위 태그들이 많을때 사용한다.
 		*/
 		var s_params = $('#loginFrm').serialize();
-
+		console.log("serialize출력 : ", s_params);
+		/*
+		결과 : user_id=kosmo&user_pw=1234
+		*/
 		$.post(
 			s_url,
 			s_params,

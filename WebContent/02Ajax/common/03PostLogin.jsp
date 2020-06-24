@@ -25,9 +25,42 @@ if(user_id.equals("kosmo") && user_pw.equals("1234")){
 	//아이디/패스워드가 일치하지 않은경우 result를 0으로 반환한다.
 	jsonObj.put("result", 0);
 }
-//JSON객체를 String타입으로 형변환후 화면에 내용을 출력한다.
-String jsonTxt = jsonObj.toJSONString();
-out.println(jsonTxt);
-//콜백결과 : {"result":1,"user_pw":"1234","user_id":"kosmo","user_name":"홍길동"}
 
+//JSON객체를 String타입으로 형변환후 화면에 내용을 출력한다.
+//String jsonTxt = jsonObj.toJSONString();
+//out.println(jsonTxt);
+
+
+
+//toJSONString()을 하지 않고 실행했을때도 정상 작동했다.
+out.println(jsonObj);
+
+
+
+
+//콜백결과 : {"result":1,"user_pw":"1234","user_id":"kosmo","user_name":"홍길동"}
 %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

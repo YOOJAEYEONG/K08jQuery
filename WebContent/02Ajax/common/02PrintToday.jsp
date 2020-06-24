@@ -14,6 +14,9 @@ ajax에서 콜백되는 내용은 항상 페이지 소스보기로 결과를 확
 <%@page trimDirectiveWhitespaces="true" %>    
 
 <%-- 파일명 : 02PrintTOday.jsp--%>
+
+
+
 <%
 request.setCharacterEncoding("UTF-8");
 String msg = request.getParameter("msg");

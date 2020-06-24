@@ -9,21 +9,16 @@
 
         /*  
         jQuery 객체가 아닌 자바스크립트의 DOM객체를 선택한다.
-        즉, 자바스크립트와 혼용해서 사용해야할때 유용하게 사용된다.
+        	즉, 자바스크립트와 혼용해서 사용해야할때 유용하게 사용된다.
         */
         $(document).ready(function(){
             $('#naver').click(function(){
-                alert($('#naver').get(0).href);//같은표현
-                alert($('#naver')[0].href);//같은표현
+                alert($('#naver').get(0).href);		//http://localhost:8081/K08jQuery/01Core/JQ02Get.html#http://www.naver.com
+                //alert($('#naver')[0].href);		//http://localhost:8081/K08jQuery/01Core/JQ02Get.html#http://www.naver.com
+                //alert($('#naver').attr("href"));	//#http://www.naver.com
             });
         });
-        $(document).ready(function () {
-            $("#naver").click(function () {
-                alert($('#naver').get(0).href);
-                alert($('#naver')[0].href);
-                
-            });
-        });
+       
 
         /*
         위 jQuery코드를 JS로 구현하면 아래와 같다.

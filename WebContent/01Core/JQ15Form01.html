@@ -9,6 +9,7 @@
     <script>
 /*
 이 예제에서는 subTarget을 타겟으로 폼값을 보내는 것을 주목
+<form target="_blank|_self|_parent|_top|프레임 이름">
 */
         $(function(){
             $('#submit').click(function(){
@@ -33,7 +34,7 @@
 <body>
     <h2>jQuery를 통해 폼값 전송하기</h2>
 	
-	<form id="sForm">
+	<form id="sForm" >
 		아이디 : <input type="text" name="user_id"/>
 		<br />
 		패스워드 : <input type="password" name="user_pw" />

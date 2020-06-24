@@ -10,7 +10,8 @@
 //폼값을 받음
 String id = request.getParameter("user_id");
 String pw = request.getParameter("user_pw");
-
+//id = "kosmo";
+//pw = "1234";
 OracleDAO dao = new OracleDAO();
 boolean isMember = dao.isMember(id,pw);
 JSONObject json = new JSONObject();
@@ -31,7 +32,7 @@ if(isMember == true){
 	json.put("result", 0);
 	json.put("message", "로그인 실패입니다.");
 }
-
+//System.out.print(json);
 String jsonStr = json.toJSONString();
 out.println(jsonStr);
 

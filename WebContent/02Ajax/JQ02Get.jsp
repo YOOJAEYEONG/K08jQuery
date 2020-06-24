@@ -20,7 +20,6 @@ $.get()
 			콜백메소드가 호출될때 전달되는 파라미터를 통해 
 			성공 혹은 실패여부를 판단할 수 있다.
 		**서버로 요청시 전송할 값(파라미터)이 없는 경우에는 생략 가능
- 
  */
 $(function(){
 	$('#btnXml').click(function(){
@@ -47,7 +46,8 @@ $(function(){
 	$("#btnJSP").click(function(){
 		
 		$.get('./common/02PrintToday.jsp',
-			{	//여기서 this는 #btnJSP
+			{	
+				//여기서 this는 #btnJSP
 				'msg'	: $(this).text(),
 				'varStr': 'jQuery좋아요'
 			},

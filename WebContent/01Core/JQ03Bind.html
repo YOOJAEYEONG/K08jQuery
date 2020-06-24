@@ -33,19 +33,19 @@
                 alert($(this).text());
             });
 
-        $('#btnClick').click( function() {
-            alert('버튼클릭됨');
-        });
+			$('#btnClick').click( function() {
+			     alert('버튼클릭됨');
+			}); 
+     
 
-
-        /*
-        해당코드가 실행되면 #btnClick을 눌러도
-        아무런반응이 없게된다. 즉 click이벤트가 제거됨.
-        */
-        $('#btnEventClear').bind('click', function(){
-            $('#btnClick').unbind('click');
-            alert('#btnClick의 이벤트가 제거됨');
-        });
+			/*
+			해당코드가 실행되면 #btnClick을 눌러도
+			아무런반응이 없게된다. 즉 click이벤트가 제거됨.
+			*/
+	        $('#btnEventClear').bind('click', function(){
+	            $('#btnClick').unbind('click');
+	            alert('#btnClick의 이벤트가 제거됨');
+	        });
 
     });
     </script>
